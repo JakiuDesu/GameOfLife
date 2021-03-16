@@ -7,7 +7,7 @@
 #include "Matrix.h"
 
 int** Matrix(int wys, int szer, FILE* in) {
-	int** MatrixMapa = (int**)malloc((sizeof(int(*)) * wys));
+	int** MatrixMapa = (int**)malloc(sizeof(int *) * wys);
 	int i;
 	int j;
 	int c;
