@@ -19,7 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="check.c" />
+    <ClCompile Include="check.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="main.c" />
     <ClCompile Include="Matrix.c" />
   </ItemGroup>
