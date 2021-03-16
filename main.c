@@ -8,8 +8,9 @@ int main(int argc, char** argv) {
 	int c;
 	int data[2] = { 0, 0 };
 	int iteracje;
+	int** tab;
 
-	FILE* in = fopen("table.txt", "r");
+	FILE* in = fopen("C:\\Users\\owner\\source\\repos\\GameOfLife\\table.txt", "r");
 
 	if (in == NULL) {
 		fprintf(stderr, "Plik %s nie istnieje!\n", argv[1]);
@@ -24,13 +25,13 @@ int main(int argc, char** argv) {
 			;
 		}
 		else {
-			data[i] = c;
+			data[i] = c - '0';
 			i++;
 		}
 	}
 	int wys = data[0];
 	int szer = data[1];
-	Matrix(data[0], data[1], in);
+	tab = Matrix(data[0], data[1], in);
 
 
 	return 0;
