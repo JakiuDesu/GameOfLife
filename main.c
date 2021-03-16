@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 			;
 		}
 		else {
-			data[i] = c;
+			data[i] = c - '0';
 			i++;
 		}
 	}
