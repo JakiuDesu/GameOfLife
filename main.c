@@ -6,7 +6,7 @@
 int main(int argc, char** argv) {
 
 	int c;
-	int data[2];
+	int data[2] = { 0, 0 };
 	int iteracje;
 
 	FILE* in = fopen("table.txt", "r");
