@@ -27,7 +27,7 @@ void check(int** tab, int w, int h, int x, int y) {
 	sum = 0;
 	for (int i = x - 1; i <= x + 1; i++) {
 		for (int j = y - 1; j <= y + 1; j++) {
-			if (i != -1 && j != -1 && i != w && j != h) {
+			if (i != -1 && j != -1 && i != w && j != h && !(i == x && j == y)) {
 				sum += tab[i][j];
 			}
 		}
