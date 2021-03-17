@@ -14,7 +14,7 @@ int** Matrix(int wys, int szer, FILE* in) {
 	for (i = 0; i < wys; i++)
 		MatrixMapa[i] = (int*)malloc(szer * sizeof(int));
 
-	for (i = 0; i < wys; i++) {
+	for(i = 0; i < wys; i++) {
 		for (int j = 0; j < szer;) {
 			c = fgetc(in);
 			if (c == '\n')
@@ -25,11 +25,7 @@ int** Matrix(int wys, int szer, FILE* in) {
 			}
 		}
 	}
-	for (i = 0; i < wys; i++) {
-		for (j = 0; j < szer; j++) {
-			printf("%i", MatrixMapa[i][j]);
-		}
-	}
+
 	return MatrixMapa;
 }
 
