@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="check.c" />
+    <ClCompile Include="gifenc.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Matrix.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="check.h" />
+    <ClInclude Include="gifenc.h" />
     <ClInclude Include="Matrix.h" />
   </ItemGroup>
   <ItemGroup>
