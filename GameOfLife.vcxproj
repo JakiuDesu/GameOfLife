@@ -19,14 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="check.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="check.c" />
+    <ClCompile Include="gifenc.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Matrix.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="check.h" />
+    <ClInclude Include="gifenc.h" />
     <ClInclude Include="Matrix.h" />
   </ItemGroup>
   <ItemGroup>
