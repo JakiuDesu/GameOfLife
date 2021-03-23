@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "check.h"
 
+//inicjalizacja wektora do obliczania stanu komórki
 void init(int** tab, int w, int h) {
 	extern length, size, sum;
 	extern vekt* v;
@@ -17,6 +18,7 @@ void init(int** tab, int w, int h) {
 	v = (vekt*)malloc(length * sizeof(vekt));
 }
 
+//dostosowanie rozmiaru wektora
 void resize() {
 	length *= 2;
 	v = (vekt*)realloc(v, length * sizeof(vekt));
@@ -24,6 +26,8 @@ void resize() {
 }
 
 void check(int** tab, int w, int h, int x, int y) {
+
+	// sąsiedztwo wg Moore'a - skanowanie komórek okalających, sprawdzanie ich stanu
 	sum = 0;
 	for (int i = x - 1; i <= x + 1; i++) {
 		for (int j = y - 1; j <= y + 1; j++) {
@@ -35,12 +39,14 @@ void check(int** tab, int w, int h, int x, int y) {
 	if (size == length) {
 		resize();
 	}
+	//zasady gry - komorki zywe - aby zmienić zasady otoczenia, zmień warunek "sum"
 	if (tab[x][y] == 1 && (sum != 2 && sum != 3)) {
 		v[size].x = x;
 		v[size].y = y;
 		v[size].wart = 0;
 		size++;
 	}
+	//zasady gry - komorki martwe - aby zmienić zasady otoczenia, zmień warunek "sum"
 	else if (tab[x][y] == 0 && (sum == 3)) {
 		v[size].x = x;
 			v[size].y = y;
@@ -49,6 +55,7 @@ void check(int** tab, int w, int h, int x, int y) {
 	}
 }
 
+//aktualizacji planszy o zmiany w danej iteracji
 void change(int** tab) {
 	for (int i = 0; i < size; i++) {
 		tab[v[i].x][v[i].y] = v[i].wart;

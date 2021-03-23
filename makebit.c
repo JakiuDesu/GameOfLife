@@ -1,5 +1,6 @@
 #include "gifenc.h"
 
+//tworzenie pliku bmp
 void makebit(char* filename, int** tab, int w, int h) {
 	int i, j, scale = 1;
 	while (w * scale < 800 && h * scale < 600)

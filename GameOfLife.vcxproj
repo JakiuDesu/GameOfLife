@@ -24,12 +24,14 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="makebit.c" />
     <ClCompile Include="Matrix.c" />
+    <ClCompile Include="write.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="check.h" />
     <ClInclude Include="gifenc.h" />
     <ClInclude Include="makebit.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="write.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="table.txt" />
