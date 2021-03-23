@@ -4,11 +4,13 @@
 #include "Matrix.h"
 #include "check.h"
 #include <windows.h>
+#include "makebit.h";
 
 int main(int argc, char** argv) {
 	int c;
 	int data[2] = { 0, 0 };
 	int iteracje = 10;
+	char buf[12];
 
 	FILE* in = fopen(argv[1], "r");
 
@@ -35,6 +37,8 @@ int main(int argc, char** argv) {
 		}
 		printf("\n");
 	}
+	snprintf(buf, 12, "test%d.bmp", 0);
+	makebit(buf, tab, szer, wys);
 	Sleep(200);
 	system("cls");
 	for (i = 0; i < iteracje; i++) {
@@ -51,6 +55,8 @@ int main(int argc, char** argv) {
 			}
 			printf("\n");
 		}
+		snprintf(buf, 12, "test%d.bmp", i+1);
+		makebit(buf, tab, szer, wys);
 		Sleep(200);
 		system("cls");
 	}
