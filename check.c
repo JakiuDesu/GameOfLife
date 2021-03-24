@@ -55,7 +55,7 @@ void check(int** tab, int w, int h, int x, int y) {
 	}
 }
 
-//aktualizacji planszy o zmiany w danej iteracji
+//aktualizacja planszy o zmiany w danej iteracji
 void change(int** tab) {
 	for (int i = 0; i < size; i++) {
 		tab[v[i].x][v[i].y] = v[i].wart;
