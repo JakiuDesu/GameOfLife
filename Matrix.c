@@ -6,11 +6,11 @@
 #include <ctype.h>
 #include "Matrix.h"
 
-//przepisanie pocz�tkowej macierzy
+//przepisanie poczatkowej macierzy
 
 int** Matrix(int wys, int szer, FILE* in) {
 
-	//alokacja pamięci
+	//alokacja pamieci
 
 	int** MatrixMapa = (int**)malloc(sizeof(int*) * wys);
 	int i;

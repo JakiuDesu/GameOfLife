@@ -3,12 +3,12 @@
 #include <stdlib.h>
 #include "check.h"
 
-//inicjalizacja wektora do obliczania stanu kom�rki
+//inicjalizacja wektora do obliczania stanu komorki
 void init(int** tab, int w, int h) {
 	extern length, size, sum;
 	extern vekt* v;
-	length = 0; // ca�a wielko��
-	size = 0; // ilo�� zmiennych w �rodku
+	length = 0; // cala wielkosc
+	size = 0; // ilosc zmiennych w srodku
 	for (int i = 0; i < w; i++) {
 		for (int j = 0; j < h; j++) {
 			length += tab[i][j];
@@ -27,7 +27,7 @@ void resize() {
 
 void check(int** tab, int w, int h, int x, int y) {
 
-	// sąsiedztwo wg Moore'a - skanowanie komórek okalających, sprawdzanie ich stanu
+	// sasiedztwo wg Moore'a - skanowanie komorek okalajacych, sprawdzanie ich stanu
 	sum = 0;
 	for (int i = x - 1; i <= x + 1; i++) {
 		for (int j = y - 1; j <= y + 1; j++) {
@@ -39,14 +39,14 @@ void check(int** tab, int w, int h, int x, int y) {
 	if (size == length) {
 		resize();
 	}
-	//zasady gry - komorki zywe - aby zmienić zasady otoczenia, zmień warunek "sum"
+	//zasady gry - komorki zywe - aby zmienic zasady otoczenia, zmien warunek "sum"
 	if (tab[x][y] == 1 && (sum != 2 && sum != 3)) {
 		v[size].x = x;
 		v[size].y = y;
 		v[size].wart = 0;
 		size++;
 	}
-	//zasady gry - komorki martwe - aby zmienić zasady otoczenia, zmień warunek "sum"
+	//zasady gry - komorki martwe - aby zmienic zasady otoczenia, zmien warunek "sum"
 	else if (tab[x][y] == 0 && (sum == 3)) {
 		v[size].x = x;
 			v[size].y = y;
