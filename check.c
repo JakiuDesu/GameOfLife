@@ -3,12 +3,12 @@
 #include <stdlib.h>
 #include "check.h"
 
-//inicjalizacja wektora do obliczania stanu komórki
+//inicjalizacja wektora do obliczania stanu kom�rki
 void init(int** tab, int w, int h) {
 	extern length, size, sum;
 	extern vekt* v;
-	length = 0; // cała wielkość
-	size = 0; // ilość zmiennych w środku
+	length = 0; // ca�a wielko��
+	size = 0; // ilo�� zmiennych w �rodku
 	for (int i = 0; i < w; i++) {
 		for (int j = 0; j < h; j++) {
 			length += tab[i][j];

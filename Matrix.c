@@ -1,4 +1,4 @@
-#ifndef MATRIX_H
+ï»¿#ifndef MATRIX_H
 #define MATRIX_H
 
 #include <stdio.h>
@@ -6,11 +6,11 @@
 #include <ctype.h>
 #include "Matrix.h"
 
-//przepisanie pocz¹tkowej macierzy
+//przepisanie poczï¿½tkowej macierzy
 
 int** Matrix(int wys, int szer, FILE* in) {
 
-	//alokacja pamiêci
+	//alokacja pamiÄ™ci
 
 	int** MatrixMapa = (int**)malloc(sizeof(int*) * wys);
 	int i;
