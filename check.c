@@ -21,8 +21,8 @@ void init(int** tab, int w, int h) {
 //dostosowanie rozmiaru wektora
 void resize() {
 	length *= 2;
-	v = (vekt*)realloc(v, length * sizeof(vekt));
-	//TO-DO zmienic na temp = realloc w ifie by zapobiec wycieku pamieci
+	vekt* temp = (vekt*)realloc(v, length * sizeof(vekt));
+	v = temp;
 }
 
 void check(int** tab, int w, int h, int x, int y) {
