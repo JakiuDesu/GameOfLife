@@ -18,7 +18,7 @@ void makebit(char* filename, int** tab, int w, int h) {
 	);
 	for (i = 0; i < h * scale;i++) {
 		for (j = 0; j < w * scale; j++) {
-			g->frame[i * h * scale + j] = tab[i/scale][j/scale];
+			g->frame[i * w * scale + j] = tab[i/scale][j/scale];
 		}
 	}
 	ge_add_frame(g, 100);
