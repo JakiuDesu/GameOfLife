@@ -40,6 +40,7 @@ int main(int argc, char** argv) {
 */
 	//generowanie kolejnych plansz i zapisywanie ich do bmp
 	writebmp(tab, szer, wys, iteracje);
+	freeTab(tab, wys, szer);
 
 	return 0;
 }

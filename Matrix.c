@@ -36,5 +36,11 @@ int** Matrix(int wys, int szer, FILE* in) {
 
 	return MatrixMapa;
 }
-
+void freeTab(int** tab, int wys, int szer) {
+	int i, j;
+	for (i = 0; i < wys; i++) {
+		free(tab[i]);
+	}
+	free(tab);
+}
 #endif

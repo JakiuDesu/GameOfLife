@@ -76,6 +76,7 @@ void writebmp(int** tabela, int szerok, int wysok, int iter) {
 		snprintf(buf, 12, "test%d.bmp", i);
 		makebit(buf, tabela, szerok, wysok);
 	}
+	free(zobacz);
 }
 
 
