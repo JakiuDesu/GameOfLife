@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 
 	//sprawdzenie czytanego pliku
 	if (in == NULL) {
-		fprintf(stderr, "Plik nie istnieje podaj poprawna nazwe pliku konfiguracyjnego!\n", argv[1]);
+		fprintf(stderr, "Plik %s nie istnieje!\n", argv[1]);
 		exit(1);
 	}
 
