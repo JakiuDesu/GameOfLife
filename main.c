@@ -3,7 +3,6 @@
 #include <ctype.h>
 #include "Matrix.h"
 #include "check.h"
-#include <windows.h>
 #include "makebit.h"
 #include "write.h"
 
@@ -13,7 +12,7 @@ int main(int argc, char** argv) {
 	int wys, szer;
 	int iteracje = 10;
 	int i = 0, j = 0, k = 0;
-	
+
 	//otworzenie pliku
 	FILE* in = fopen(argv[1], "r");
 
@@ -40,8 +39,8 @@ int main(int argc, char** argv) {
 	first(znaki, wys, szer, tab);
 */
 	//generowanie kolejnych plansz i zapisywanie ich do bmp
-	write(tab, szer, wys, iteracje);
-	
+	writebmp(tab, szer, wys, iteracje);
 
 	return 0;
 }
+

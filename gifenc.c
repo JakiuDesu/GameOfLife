@@ -12,12 +12,17 @@
 #include <io.h>
 #else
 #include <unistd.h>
+#define _write write
+#define _close close
 #endif
 #include <stdint.h>
 
 /* helper to _write a little-endian 16-bit number portably */
-#define write_num(fd, n) _write((fd), (uint8_t []) {(n) & 0xFF, (n) >> 8}, 2)
-
+#ifdef _WIN32
+	#define write_num(fd, n) _write((fd), (uint8_t []) {(n) & 0xFF, (n) >> 8}, 2)
+#else
+	#define write_num(fd, n) write((fd), (uint8_t []) {(n) & 0xFF, (n) >> 8}, 2)
+#endif
 static uint8_t vga[0x30] = {
     0x00, 0x00, 0x00,
     0xAA, 0x00, 0x00,
